@@ -13,7 +13,7 @@ Included functions to collect user inputs to select choice of three cities, choi
 
 Features include the ability to repeat the analysis and the ability to display the raw data used in generating the statistics.
 ### Files used
-Project functionality resides within bikeshare.py with city specific data not residing within repository.
+Project functionality resides within bikeshare.py with cities Chicago, New York City, Washington specific data not residing within repository.
 
 ### Credits
 Boiler plate of project provided By Udacity.com with final project functionality added by Jeramie Brehm.
