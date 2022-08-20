@@ -17,7 +17,6 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = month = day = "blank"
 
     city_choices = {'chicago', 'new york city', 'washington'}
@@ -44,7 +43,6 @@ def get_filters():
         else:
             print("Sorry, text only. Please try again.")
 
-    # TO DO: get user input for month (all, january, february, ... , june)
     while month == "blank":
         raw_month = input("Pick a month, or all for everything: ")
         y = raw_month.lower().strip()
@@ -55,7 +53,6 @@ def get_filters():
         else:
             print("Invalid month selection, or spelling. Please try again")
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while day == "blank":
         raw_day = input("Pick a day of the week, or all: ")
         z = raw_day.lower().strip()
@@ -108,13 +105,10 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
     print('Most common travel month: {}'.format(df['Start Time'].dt.strftime('%m/%Y').value_counts().index[0]))
 
-    # TO DO: display the most common day of week
     print('Most common travel day:   {}'.format(df['Start Time'].dt.strftime('%A').value_counts().index[0]))
 
-    # TO DO: display the most common start hour
     print('Most common start hour:   {}00'.format(df['Start Time'].dt.strftime('%H').value_counts().index[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -128,10 +122,10 @@ def station_stats(df):
     start_time = time.time()
 
     # TO DO: display most commonly used start station
-    print('Most commonly used start station: {}'.format(df['Start Station'].value_counts().index[0]))
+    print('Start station most commonly used: {}'.format(df['Start Station'].value_counts().index[0]))
 
     # TO DO: display most commonly used end station
-    print('Most commonly used end station:   {}\n'.format(df['End Station'].value_counts().index[0]))
+    print('Eend station most used:   {}\n'.format(df['End Station'].value_counts().index[0]))
 
     # TO DO: display most frequent combination of start station and end station trip
     print('Most frequent start/stop station combination:')
