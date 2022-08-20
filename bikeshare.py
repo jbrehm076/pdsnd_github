@@ -105,13 +105,10 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
     print('Most common travel month: {}'.format(df['Start Time'].dt.strftime('%m/%Y').value_counts().index[0]))
 
-    # TO DO: display the most common day of week
     print('Most common travel day:   {}'.format(df['Start Time'].dt.strftime('%A').value_counts().index[0]))
 
-    # TO DO: display the most common start hour
     print('Most common start hour:   {}00'.format(df['Start Time'].dt.strftime('%H').value_counts().index[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
